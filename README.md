@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+`forEach` takes an array and a function, and runs that function on each element in the array, and **returns `undefined`**. `map` also takes an array and a function, and returns **a new array** containing the result of running that function on each element of the array.
+
 2. What is the difference between a function and a method?
+
+Methods are the same as functions with the only difference that methods are defined **inside of an object (or attached to the prototype or class)**. So functions stand alone, but methods are always attached to some object or instance of a prototype or class.
 
 3. What is closure?
 
+Closure is the means by which a function can "recall" the context in which it was declared, even when it is called elsewhere. So the function will have access to and can make use of any variable that is within scope when it is defined.
+
 4. Describe the four rules of the 'this' keyword.
 
+When defined at the global level (outside of any enclosing scope) `this` will refer to the global object---in browsers this is the `window` object, in Node it will usually be the module.
+When used with an implicit binding, it will be bound to the surrounding object.
+When used inside a constructor, it will be bound to any given instance of that constructor.
+When used with the `bind` method, it will be bound to "whatever is to the left" of `.bind`, or whatever object `bind` is being called on.
+
 5. Why do we need super() in an extended class?
+
+`super()` is used to pass properties "up" to the super-class constructor, so that a child (or sub-class) instance can use the constructor function of the parent (or super-class).
 
 ## Project Set up
 
@@ -78,7 +91,7 @@ Create constructors, bind methods, and create cuboids in this prototypes challen
 
 ## Task 4: Classes
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* [ ] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
+* [X] Use the [classes.js](challenges/classes.js) link to get started. Read the instructions carefully!
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
